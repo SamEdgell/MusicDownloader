@@ -1,0 +1,387 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1128</width>
+    <height>240</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background-color: #BABABA;</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QGroupBox" name="mainFrame">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>10</y>
+      <width>420</width>
+      <height>222</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QGroupBox {
+    border: 2px solid black; /* Border for the group box */
+    border-radius: 5px; /* Rounded corners for the border */
+    margin-top: 0px; /* Moves the entire group box and border down */
+}</string>
+    </property>
+    <property name="title">
+     <string/>
+    </property>
+    <widget class="QPushButton" name="downloadButton">
+     <property name="geometry">
+      <rect>
+       <x>330</x>
+       <y>120</y>
+       <width>75</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton {
+    color: #000000; /* Text color */
+    border: 2px solid #000000; /* Border color */
+    border-radius: 5px; /* Rounded corners */
+	background-color: #FFA2A7;
+}
+
+QPushButton:hover {
+    border: 2px solid #000000; /* Border color */
+    border-radius: 5px; /* Rounded corners */
+	background-color: #A6FFA7;
+}
+
+QPushButton:pressed {
+	border: 2px solid #000000; /* Border color */
+    border-radius: 5px; /* Rounded corners */
+	background-color: #A6FFA7;
+}</string>
+     </property>
+     <property name="text">
+      <string>Download</string>
+     </property>
+    </widget>
+    <widget class="QTextEdit" name="urlText">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>120</y>
+       <width>313</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QTextEdit{
+    color: #000000; /* Text color */
+    background-color: #FFFFFF; /* Background color */
+    border: 1px solid black; /* Thin black solid border */
+    border-radius: 5px; /* Optional: rounded corners */
+    padding: 5px; /* Adds space around the text */
+    padding-top: 3px; /* Adjusts the padding at the top */
+    padding-bottom: 3px; /* Adjusts the padding at the bottom */
+    line-height: 20px; /* Ensures proper vertical alignment of text */
+}</string>
+     </property>
+     <property name="verticalScrollBarPolicy">
+      <enum>Qt::ScrollBarPolicy::ScrollBarAlwaysOff</enum>
+     </property>
+     <property name="horizontalScrollBarPolicy">
+      <enum>Qt::ScrollBarPolicy::ScrollBarAlwaysOff</enum>
+     </property>
+     <property name="readOnly">
+      <bool>false</bool>
+     </property>
+     <property name="html">
+      <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;meta charset=&quot;utf-8&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+hr { height: 1px; border-width: 0; }
+li.unchecked::marker { content: &quot;\2610&quot;; }
+li.checked::marker { content: &quot;\2612&quot;; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Segoe UI'; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Paste URL Here&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+     </property>
+    </widget>
+    <widget class="QRadioButton" name="youtubeButton">
+     <property name="geometry">
+      <rect>
+       <x>220</x>
+       <y>20</y>
+       <width>101</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QRadioButton {
+    color: #000000; /* Text color */
+}
+
+QRadioButton::indicator {
+    width: 10px; /* Size of the circle */
+    height: 10px; /* Size of the circle */
+    border: 2px solid #000000; /* Border of the circle */
+    border-radius: 5px; /* Makes the circle rounded */
+    background-color: #FFFFFF; /* Background of the circle */
+}
+
+QRadioButton::indicator:checked {
+    background-color: #00FF00; /* Set background color to red when checked */
+}</string>
+     </property>
+     <property name="text">
+      <string>YouTube</string>
+     </property>
+     <property name="checked">
+      <bool>false</bool>
+     </property>
+    </widget>
+    <widget class="QRadioButton" name="spotifyButton">
+     <property name="geometry">
+      <rect>
+       <x>110</x>
+       <y>20</y>
+       <width>101</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QRadioButton {
+    color: #000000; /* Text color */
+}
+
+QRadioButton::indicator {
+    width: 10px; /* Size of the circle */
+    height: 10px; /* Size of the circle */
+    border: 2px solid #000000; /* Border of the circle */
+    border-radius: 5px; /* Makes the circle rounded */
+    background-color: #FFFFFF; /* Background of the circle */
+}
+
+QRadioButton::indicator:checked {
+    background-color: #00FF00; /* Set background color to red when checked */
+}</string>
+     </property>
+     <property name="text">
+      <string>Spotify</string>
+     </property>
+     <property name="checked">
+      <bool>true</bool>
+     </property>
+    </widget>
+    <widget class="QTextEdit" name="downloadPathText">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>70</y>
+       <width>313</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QTextEdit{
+    color: #000000; /* Text color */
+    background-color: #FFFFFF; /* Background color */
+    border: 1px solid black; /* Thin black solid border */
+    border-radius: 5px; /* Optional: rounded corners */
+    padding: 5px; /* Adds space around the text */
+    padding-top: 3px; /* Adjusts the padding at the top */
+    padding-bottom: 3px; /* Adjusts the padding at the bottom */
+    line-height: 20px; /* Ensures proper vertical alignment of text */
+}</string>
+     </property>
+     <property name="verticalScrollBarPolicy">
+      <enum>Qt::ScrollBarPolicy::ScrollBarAlwaysOff</enum>
+     </property>
+     <property name="horizontalScrollBarPolicy">
+      <enum>Qt::ScrollBarPolicy::ScrollBarAlwaysOff</enum>
+     </property>
+     <property name="readOnly">
+      <bool>true</bool>
+     </property>
+     <property name="html">
+      <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;meta charset=&quot;utf-8&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+hr { height: 1px; border-width: 0; }
+li.unchecked::marker { content: &quot;\2610&quot;; }
+li.checked::marker { content: &quot;\2612&quot;; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Segoe UI'; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Select Download Location&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="selectFolderButton">
+     <property name="geometry">
+      <rect>
+       <x>330</x>
+       <y>70</y>
+       <width>75</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton {
+    color: #000000; /* Text color */
+    border: 2px solid #000000; /* Border color */
+    border-radius: 5px; /* Rounded corners */
+	background-color: #FFA2A7;
+}
+
+QPushButton:hover {
+    border: 2px solid #000000; /* Border color */
+    border-radius: 5px; /* Rounded corners */
+	background-color: #A6FFA7;
+}
+
+QPushButton:pressed {
+	border: 2px solid #000000; /* Border color */
+    border-radius: 5px; /* Rounded corners */
+	background-color: #A6FFA7;
+}</string>
+     </property>
+     <property name="text">
+      <string>Select Folder</string>
+     </property>
+    </widget>
+    <widget class="QProgressBar" name="progressBar">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>184</y>
+       <width>392</width>
+       <height>23</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QProgressBar{
+	border: 1px solid black;
+	border-radius: 5px
+}
+
+QProgressBar::chunk{
+	background-color: #00FF00;
+	border-radius: 5px
+}</string>
+     </property>
+     <property name="value">
+      <number>0</number>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignmentFlag::AlignCenter</set>
+     </property>
+     <property name="textVisible">
+      <bool>true</bool>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QTextEdit" name="consoleLog">
+    <property name="geometry">
+     <rect>
+      <x>439</x>
+      <y>11</y>
+      <width>676</width>
+      <height>220</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Consolas</family>
+      <pointsize>10</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QTextEdit {
+    border: 2px solid black; /* Border for the group box */
+    border-radius: 1px; /* Smallest rounded corners for the border */
+    background-color: #E6E2BE; /* Yellowish-beige background color */
+    padding-top: 1px; /* Add padding to the top */
+    padding-bottom: 1px; /* Add padding to the bottom */
+    padding-right: 1px; /* Add padding to the right to move the scrollbar inward */
+}
+
+QScrollBar:vertical {
+    background: #E6E2BE; /* Background color of the scrollbar track */
+    width: 10px; /* Width of the scrollbar */
+    border-radius: 1px; /* Smallest rounded corners for the scrollbar track */
+}
+
+QScrollBar::handle:vertical {
+    background: #FFA2A7; /* Background color of the handle */
+    border: 1px solid black; /* Border color of the handle */
+    border-radius: 4px; /* Smallest rounded corners for the handle */
+    min-height: 20px; /* Minimum height of the handle */
+}
+
+QScrollBar::handle:vertical:hover {
+    background: #A6FFA7; /* Change background color to green when hovered */
+}
+
+QScrollBar::handle:vertical:pressed {
+    background: #A6FFA7; /* Change background color to green when selected */
+}
+
+QScrollBar::add-line:vertical, QScrollBar::sub-line:vertical {
+    background: #FFFFFF; /* Match the background color of the QTextBrowser */
+    height: 0px; /* Height set to 0 to hide the add-line and sub-line */
+    border: none; /* Remove any border */
+}
+
+QScrollBar::up-arrow:vertical, QScrollBar::down-arrow:vertical {
+    background: none; /* No background for the up-arrow and down-arrow */
+    height: 0px; /* Height set to 0 to hide the up-arrow and down-arrow */
+    border: none; /* Remove any border */
+}
+
+QScrollBar::add-page:vertical, QScrollBar::sub-page:vertical {
+    background: none; /* No background for the add-page and sub-page */
+    border: none; /* Remove any border */
+}</string>
+    </property>
+    <property name="readOnly">
+     <bool>true</bool>
+    </property>
+    <property name="html">
+     <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;meta charset=&quot;utf-8&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+hr { height: 1px; border-width: 0; }
+li.unchecked::marker { content: &quot;\2610&quot;; }
+li.checked::marker { content: &quot;\2612&quot;; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Consolas'; font-size:10pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:'Segoe UI'; font-size:9pt;&quot;&gt;&lt;br /&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+   </widget>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+ <designerdata>
+  <property name="gridDeltaX">
+   <number>10</number>
+  </property>
+  <property name="gridDeltaY">
+   <number>10</number>
+  </property>
+  <property name="gridSnapX">
+   <bool>false</bool>
+  </property>
+  <property name="gridSnapY">
+   <bool>false</bool>
+  </property>
+  <property name="gridVisible">
+   <bool>true</bool>
+  </property>
+ </designerdata>
+</ui>
